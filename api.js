@@ -5,7 +5,7 @@ myButton.addEventListener("click", async () => {
   console.log("clicked!");
 
   const fetched = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
-  console.log(fetched);
-  const content = await JSON.stringify(fetched);
+  const ditto = await fetched.json();
+  const content = JSON.stringify(ditto);
   display.innerHTML = content;
 });
